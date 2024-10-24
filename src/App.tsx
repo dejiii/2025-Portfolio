@@ -1,5 +1,4 @@
 import './index.css';
-import heroImage from './assets/heroImage.png';
 
 function App() {
   return (
@@ -9,7 +8,9 @@ function App() {
           <h3 className="text-2xl font-bold mt-2">Dejiii</h3>
         </header>
         <img
-          src={heroImage}
+          src={
+            'https://res.cloudinary.com/dejithecoder/image/upload/v1729789427/heroImage.png'
+          }
           alt="hero display"
           className="h-[400px] w-full mt-3 object-cover"
         />
@@ -20,7 +21,7 @@ function App() {
           <article className="md:w-8/12 w-full">
             <div className="relative w-full md:mb-[30px]">
               <h3 className="font-bold mb-3">Professional Summary 💻</h3>
-              <p className="mb-[30px]">
+              <p className="mb-[30px] leading-relaxed">
                 I am a software developer with core strength in building web and
                 mobile apps. With over 5 years of software development, I have
                 impacted a plethora of startups and companies across fields like
