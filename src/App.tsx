@@ -1,142 +1,147 @@
-import './index.css';
+import "./index.css";
 
 function App() {
+  const date = new Date();
+  const year = date.getFullYear();
+
   return (
     <div>
-      <main className="mx-auto max-w-[800px] px-4">
-        <header>
-          <h3 className="text-2xl font-bold mt-2">Dejiii</h3>
-        </header>
-        <img
-          src={
-            'https://res.cloudinary.com/dejithecoder/image/upload/v1729789427/heroImage.png'
-          }
-          alt="hero display"
-          className="h-[400px] w-full mt-3 object-cover"
-        />
-        <h2 className="text-2xl font-bold mt-2 text-[#49742C]">
-          Frontend Engineer
-        </h2>
-        <section className="md:flex block gap-20 mt-10">
-          <article className="md:w-8/12 w-full">
-            <div className="relative w-full md:mb-[30px]">
-              <h3 className="font-bold mb-3">Professional Summary 💻</h3>
-              <p className="mb-[30px] leading-relaxed">
-                I am a software developer with core strength in building web and
-                mobile apps. With over 5 years of software development, I have
-                impacted a plethora of startups and companies across fields like
-                fintech, edtech, and data management.
-              </p>
+      <section className="container mx-auto">
+        <div className="md:w-9/12 w-11/12 mx-auto">
+          <header className="flex items-center justify-between py-[20px] mt-4">
+            <h3 className="text-2xl font-bold">Dejiii</h3>
+            <span>
+              <button className="rounded-full border-[1px] border-[#3d3d3d] text-[#3d3d3d] py-3 px-5">
+                Send an Email
+              </button>
+            </span>
+          </header>
+          <img
+            src={
+              "https://res.cloudinary.com/dejithecoder/image/upload/v1729789427/heroImage.png"
+            }
+            alt="hero display"
+            className="h-[500px] w-full mt-[15px] object-cover"
+          />
+          <h3 className="md:text-3xl text-2xl mt-[20px] text-[#3d3d3d]">
+            <b className="text-black">Senior Frontend Engineer</b> with 5 years+
+            Years of Experience building a plethora of Early Stage Startups and
+            companies across fields like fintech, edtech, and data management.
+          </h3>
+        </div>
+      </section>
+
+      <section className="container mx-auto my-[120px]">
+        <div className="md:w-9/12 w-11/12 mx-auto">
+          <b className="text-3xl">Blog</b>
+          <div className="mt-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+            perferendis! Sint alias pariatur vitae dignissimos nesciunt
+            recusandae velit perferendis commodi accusamus, accusantium cum
+            sapiente tempora dolor. Voluptates unde eum molestias.
+          </div>
+        </div>
+      </section>
+      <section className="container mx-auto my-[120px]">
+        <div className="md:w-9/12 w-11/12 mx-auto">
+          <b className="text-3xl">Playground</b>
+          <p className="mt-2">I sometimes build tools to automate tools</p>
+          <div className="mt-4 bg-[#f4ffc9] p-3 rounded-[15px]">
+            <div className="md:flex block gap-4 items-center p-3">
+              <div className="md:w-6/12 w-full">
+                <p>Project Title</p>
+                <h3 className="text-3xl font-bold pb-[50px] mt-2 text-black">
+                  A detailed description
+                  <br /> goes here
+                </h3>
+                <a
+                  href="/"
+                  className="font-medium flex items-center gap-2 text-[#4c5b14]"
+                >
+                  Preview Live Project <Arrow />
+                </a>
+              </div>
+              <div className="md:w-6/12 w-full h-[400px]">
+                <img
+                  src="data:image/png;base64,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"
+                  className="md:h-[400px] h-[250px] w-full rounded-[15px]"
+                  alt=""
+                />
+              </div>
             </div>
-            <div className="w-full mb-20">
-              <h3 className="font-bold mb-3">Experiments 🚧</h3>
-              <ul className="list-none">
-                <li className="pb-[30px]">
-                  <img
-                    src="https://placehold.co/500.png"
-                    className="h-[150px] w-full"
-                    alt="experiment banner"
-                  />
-                  <div className="my-2  flex items-center gap-2">
-                    <span className="font-medium">Another One</span>
-                    <Arrow />
-                  </div>
-                  <div className="text-ash">Description goes here</div>
-                </li>
-                <li className="pb-[30px]">
-                  <img
-                    src="https://placehold.co/500.png"
-                    className="h-[150px] w-full"
-                    alt="experiment banner"
-                  />
-                  <div className="my-2  flex items-center gap-2">
-                    <span className="font-medium">Another One</span>
-                    <Arrow />
-                  </div>
-                  <div className="text-ash">Description goes here</div>
-                </li>
-                <li className="pb-[30px]">
-                  <img
-                    src="https://placehold.co/500.png"
-                    className="h-[150px] w-full"
-                    alt="experiment banner"
-                  />
-                  <div className="my-2  flex items-center gap-2">
-                    <span className="font-medium">Another One</span>
-                    <Arrow />
-                  </div>
-                  <div className="text-ash">Description goes here</div>
-                </li>
-              </ul>
+          </div>
+          <div className="mt-4 bg-[#ffe7c9] p-3 rounded-[15px]">
+            <div className="md:flex block gap-4 items-center p-3">
+              <div className="md:w-6/12 w-full">
+                <p>Project Title</p>
+                <h3 className="text-3xl font-bold pb-[50px] mt-2 text-black">
+                  A detailed description
+                  <br /> goes here
+                </h3>
+                <a
+                  href="/"
+                  className="font-medium flex items-center gap-2 text-[#4c5b14]"
+                >
+                  Preview Live Project <Arrow />
+                </a>
+              </div>
+              <div className="md:w-6/12 w-full h-[400px]">
+                <img
+                  src="data:image/png;base64,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"
+                  className="md:h-[400px] h-[250px] w-full rounded-[15px]"
+                  alt=""
+                />
+              </div>
             </div>
-          </article>
-          <aside className="md:w-4/12 w-full relative mb-[30px]">
-            <h3 className="font-bold mb-3 pl-[30px]">Contact Me 🔗</h3>
-            <Line />
-            <ul className="list-none">
-              <li className="my-2">
-                <a href="/" target="_blank" className="pl-[30px] text-ash">
-                  Resume
+          </div>
+          <div className="mt-4 bg-[#ffc9f8] p-3 rounded-[15px]">
+            <div className="md:flex block gap-4 items-center p-3">
+              <div className="md:w-6/12 w-full">
+                <p>Project Title</p>
+                <h3 className="text-3xl font-bold pb-3 mt-2 text-black">
+                  A detailed description
+                  <br /> goes here
+                </h3>
+                <a
+                  href="/"
+                  className="font-medium flex items-center gap-2 text-[#3d3d3d]"
+                >
+                  Preview Live Project <Arrow />
                 </a>
-              </li>
-              <Line />
-              <li className="my-2">
-                <a href="/" target="_blank" className="pl-[30px] text-ash">
-                  LinkedIn
-                </a>
-              </li>
-              <Line />
-              <li className="my-2">
-                <a href="/" target="_blank" className="pl-[30px] text-ash">
-                  Email
-                </a>
-              </li>
-              <Line />
-            </ul>
-            <Border />
-          </aside>
-        </section>
-      </main>
+              </div>
+              <div className="md:w-6/12 w-full h-[400px]">
+                <img
+                  src="data:image/png;base64,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"
+                  className="md:h-[400px] h-[250px] w-full rounded-[15px]"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer className="container mx-auto mt-[120px] mb-[20px]">
+        <div className="md:w-9/12 w-11/12 mx-auto">
+          <div className="flex">
+            <div className="w-4/12">
+              <h3 className="text-2xl font-bold">Dejiii</h3>
+            </div>
+            <div className="w-8/12 text-4xl">
+              Do you have a question, an idea, or a project you need help with?
+              send an email to{" "}
+              <a href="" target="_blank" className="font-bold text-green-600">
+                hello@dejiii.xyz
+              </a>
+            </div>
+          </div>
+          <div className="mt-3 text-2xl">&copy; {year}</div>
+        </div>
+      </footer>
     </div>
   );
 }
 
 export default App;
-
-const Line = () => {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 1300 10"
-      height="3"
-      preserveAspectRatio="none"
-      className="w-full h-[3px] fill-sky-600/20"
-    >
-      <g buffered-rendering="static">
-        <path d="M1264.29 4.85c-1.04-.029-17.58-1.783-26.79-1.35-.37.018-11.97-.122-12.33-.146-.7-.048-1.76-.174-2.06-.13-9.7 1.458-20.01-.138-29.8.212-9.71.348-19.24.035-28.79-.08-4.81-.06-9 .034-13.18.402-.34.029-.71.141-.86.128-10.56-.803-22.39.909-32.63-.561-1.93-.278-4.38-.178-6.66-.143-.51.346-1.18.73-3.66.558-2.1-.146-3.84-.456-5.88-.648-2.58-.244-6.03-.718-7.52.087-1.25.683 4.71.299 5.18 1.013-2.88-.171-6.11-.238-8.47-.535-3.21-.406-5.99-.487-9.57-.22-1.65.123-4.45.18-5.58.01-7.74-1.166-15.7-.01-23.5-.135-6.53-.107-3.97.723-3.05 1.428-1.41-.191-2.41-.286-3.09-.428-2.27-.47-2.53-1.764-8.48-.661-4.25-.645-9.56-.795-14.69-1-6.03-.243-6.8-.045-6 1.369.22.042.64.087.62.123-.07.104-.31.203-.49.305l-.72.085.49-.116c.13-.131.16-.263.1-.396-3.27-.349-6.17-.766-9.09-1.221-6.85-1.064-12.261-.719-15.806.836-9.731-1.469-9.731-1.469-17.434.517-4.97-.687-9.437-1.73-16.304-1.557-4.087.102-7.494-.071-11.182-.133-6.645-.112-13.223-.139-19.763-.478-2.518-.13-3.623.404-4.689.771l.589.111-.635-.101c-6.199.61-10.777-1.021-16.977-.409-9.018-1.128-14.884-.299-20.2 1.371-3.734-1.341-9.221-1.92-15.964-1.453-5.702.392-12.726-.804-17.467.596-1.504.445-4.296.175-5.807-.166-5.16-1.164-6.5-.121-8.665.471-4.512.112-3.643-1.363-8.56-1.019-4.676.326-6.18 1.162-7.612 1.96-.118.066-.177.136-.269.202-.66.47-1.092 1.103-4.898.68-2.452-.274-3.243-.777-.405-1.202 1.471-.221 3.387-.438 2.047-.819-1.151-.326-3.708-.349-5.154-.169-2.968.367-5.002.348-7.755-.1-3.532-.574-8.535-.494-12.884-.693-2.393-.11-2.838.338-3.237.68-1.092.181-1.085.363-.006.546-1.55.231-2.642.197-3.499-.156-2.367-.976-4.166-1.891-12.366-1.196-3.512.298-9.031-.184-13.622-.331-.654-.021-1.459-.236-1.772-.206-8.58.776-17.121-.089-25.655.001-1.805.019-2.544.247-2.355.571.242.135 1.969.194.628.409l-.902-.37c-1.923-.233-3.885-.487-6.331-.332-5.022.318-9.456.205-14.145-.307-3.374-.367-7.71-.677-10.823.233-.857.25-1.831.068-2.831-.045-4.781-.533-5.54.019-4.192.647 1.36.637-1.047 1.236 1.373 1.883-1.615-.068-2.505-.056-2.832-.129-3.073-.675-.163-2.203-7.795-2.147-5.134.037-9.652-.871-15.015-.208-1.648.204-3.544-.149-5.317-.253-9.227-.536-9.371-.525-15.943 1.022-6.605-1.033-14.06-1.331-22.379-.846-1.929.113-2.701-.123-3.59-.345.177-.046.523-.099.484-.138-.111-.121-.582-.116-1.19.006-3.904.436-7.063 1.227-12.622.348-3.263-.518-8.56-.144-12.942-.48-3.021-.231-6.48.233-6.284 1.053 1.739.459 2.688.93.732 1.541-.359-.567-.654-1.04-.948-1.513-3.649-.587-8.403-.846-12.517-1.28-6.212-.655-13.465-.489-19.455.426l-.706.082.595-.106c-1.511-.356-4.002-.659-5.834-.427-6.624.839-12.713.036-19.01-.076-1.766-.408-3.545-.351-5.336-.005-2.839.004-5.677.008-8.515.01-1.288-.144-1.589-.104-.778.14-.288.125-.785.361-.844.357-8.102-.489-16.185-.884-24.386-.063-3.597-.759-6.232-.452-8.626.245-.255.076-1.131.146-1.595.125-17.991-.824-26.885-.888-39.12-.27-1.073.053-2.871.193-3.159.127-2.969-.703-5.369-.506-9.659-.249-2.956.176-7.534-.287-11.17.314-1.177.193-2.949.018-4.244-.14-7.553-.923-15.237-.827-23.582-.311-3.06.189-7.37.21-10.862-.148.196-.043.582-.093.549-.129-.111-.119-.549-.11-1.118.023-4.977-.072-10.705.559-14.642-.528-.275-.076-2.021-.078-2.04-.065-1.982 1.359-8.548.075-12.772.757-3.663.592-10.457-.454-15.336-.212-6.971.346-14.557-.346-20.985.523-.471.063-1.589.044-2.165-.014-7.73-.799-16.951.133-24.726-.729-1.766-.196-4.565-.217-6.703-.142-12.288.427-24.779.084-37.184.408-6.749.177-14.303-.027-21.202-.173-6.18-.13-11.994.044-17.951.02-12.033-.049-24.066.104-36.112-.082-5.591-.085-11.438.04-16.892.167-17.604.411-35.268.551-52.918.592-14.466.035-28.434.592-42.612.868-15.041.292-28.552 1.382-42.965 1.94-2.217.085-4.545.185-6.475.389-4.878.514-4.728 1.471.288 1.929 2.001.184 4.421.371 6.54.335 15.636-.27 31.128.168 46.679.283 22.784.169 45.359-.419 68.052-.504 29.755-.114 59.34-.708 89.278-.504 18.9.129 38.152-.092 57.196-.019 15.126.057 30.35-.175 45.45.322 10.921.361 21.816-.337 32.861-.17 35.484.532 71.073.004 106.596.294 27.159.222 54.318-.062 81.477-.05 17.435.007 34.876.382 52.304.345 15.257-.031 30.566-.035 45.771.02 25.936.094 51.976-.333 77.847.336 3.773.098 7.638.101 11.464.102 32.031.016 64.121-.19 96.086.085 36.184.309 72.374.154 108.499.415 19.004.136 38.139.053 56.986.416 21.008.404 42.128.031 62.908.456 23.6.483 47.32.509 70.85.622 41.9.2 83.75.739 125.69.698 6.32-.005 12.82.272 19.34.271 6.14-.001 11.83-.066 17.48-.712 7.09-.809 22.11-1.993 14.86-1.993-13.62.001-20.21-2.073-33.78-2.445z"></path>
-      </g>
-    </svg>
-  );
-};
-
-const Border = () => {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 11 1300"
-      width="3"
-      preserveAspectRatio="none"
-      className="xs:flex absolute h-[200px] left-4 top-0 w-[3px] fill-pink-600/20"
-    >
-      <g buffered-rendering="static">
-        <path d="M4.85 35.708c-.029 1.04-1.783 17.58-1.35 26.79.018.37-.122 11.97-.146 12.33-.048.7-.174 1.76-.13 2.06 1.458 9.7-.138 20.01.212 29.8.348 9.71.035 19.24-.08 28.79-.06 4.81.034 9 .402 13.18.029.34.141.71.128.86-.803 10.56.909 22.39-.561 32.63-.278 1.93-.178 4.38-.143 6.66.346.51.73 1.18.558 3.66-.146 2.1-.456 3.84-.648 5.88-.244 2.58-.718 6.03.087 7.52.683 1.25.299-4.71 1.013-5.18-.171 2.88-.238 6.11-.535 8.47-.406 3.21-.487 5.99-.22 9.57.123 1.65.18 4.45.01 5.58-1.166 7.74-.01 15.7-.135 23.5-.107 6.53.723 3.97 1.428 3.05-.191 1.41-.286 2.41-.428 3.09-.47 2.27-1.764 2.53-.661 8.48-.645 4.25-.795 9.56-1 14.69-.243 6.03-.045 6.8 1.369 6 .042-.22.087-.64.123-.62.104.07.203.31.305.49l.085.72-.116-.49c-.131-.13-.263-.16-.396-.1-.349 3.27-.766 6.17-1.221 9.09-1.064 6.85-.719 12.261.836 15.806-1.469 9.731-1.469 9.731.517 17.434-.687 4.97-1.73 9.437-1.557 16.304.102 4.087-.071 7.494-.133 11.182-.112 6.645-.139 13.223-.478 19.763-.13 2.518.404 3.623.771 4.689l.111-.589-.101.635c.61 6.199-1.021 10.777-.409 16.977-1.128 9.018-.299 14.884 1.371 20.2-1.341 3.734-1.92 9.221-1.453 15.964.392 5.702-.804 12.726.596 17.467.445 1.504.175 4.296-.166 5.807-1.164 5.16-.121 6.5.471 8.665.112 4.512-1.363 3.643-1.019 8.56.326 4.676 1.162 6.18 1.96 7.612.066.118.136.177.202.269.47.66 1.103 1.092.68 4.898-.274 2.452-.777 3.243-1.202.405-.221-1.471-.438-3.387-.819-2.047-.326 1.151-.349 3.708-.169 5.154.367 2.968.348 5.002-.1 7.755-.574 3.532-.494 8.535-.693 12.884-.11 2.393.338 2.838.68 3.237.181 1.092.363 1.085.546.006.231 1.55.197 2.642-.156 3.499-.976 2.367-1.891 4.166-1.196 12.366.298 3.512-.184 9.031-.331 13.622-.021.654-.236 1.459-.206 1.772.776 8.58-.089 17.121.001 25.655.019 1.805.247 2.544.571 2.355.135-.242.194-1.969.409-.628l-.37.902c-.233 1.923-.487 3.885-.332 6.331.318 5.022.205 9.456-.307 14.145-.367 3.374-.677 7.71.233 10.823.25.857.068 1.831-.045 2.831-.533 4.781.019 5.54.647 4.192.637-1.36 1.236 1.047 1.883-1.373-.068 1.615-.056 2.505-.129 2.832-.675 3.073-2.203.163-2.147 7.795.037 5.134-.871 9.652-.208 15.015.204 1.648-.149 3.544-.253 5.317-.536 9.227-.525 9.371 1.022 15.943-1.033 6.605-1.331 14.06-.846 22.379.113 1.929-.123 2.701-.345 3.59-.046-.177-.099-.523-.138-.484-.121.111-.116.582.006 1.19.436 3.904 1.227 7.063.348 12.622-.518 3.263-.144 8.56-.48 12.942-.231 3.021.233 6.48 1.053 6.284.459-1.739.93-2.688 1.541-.732-.567.359-1.04.654-1.513.948-.587 3.649-.846 8.403-1.28 12.517-.655 6.212-.489 13.465.426 19.455l.082.706-.106-.595c-.356 1.511-.659 4.002-.427 5.834.839 6.624.036 12.713-.076 19.01-.408 1.766-.351 3.545-.005 5.336.004 2.839.008 5.677.01 8.515-.144 1.288-.104 1.589.14.778.125.288.361.785.357.844-.489 8.102-.884 16.185-.063 24.386-.759 3.597-.452 6.232.245 8.626.076.255.146 1.131.125 1.595-.824 17.991-.888 26.885-.27 39.12.053 1.073.193 2.871.127 3.159-.703 2.969-.506 5.369-.249 9.659.176 2.956-.287 7.534.314 11.17.193 1.177.018 2.949-.14 4.244-.923 7.553-.827 15.237-.311 23.582.189 3.06.21 7.37-.148 10.862-.043-.196-.093-.582-.129-.549-.119.111-.11.549.023 1.118-.072 4.977.559 10.705-.528 14.642-.076.275-.078 2.021-.065 2.04 1.359 1.982.075 8.548.757 12.772.592 3.663-.454 10.457-.212 15.336.346 6.971-.346 14.557.523 20.985.063.471.044 1.589-.014 2.165-.799 7.73.133 16.95-.729 24.73-.196 1.76-.217 4.56-.142 6.7.427 12.29.084 24.78.408 37.18.177 6.75-.027 14.31-.173 21.21-.13 6.17.044 11.99.02 17.95-.049 12.03.104 24.06-.082 36.11-.085 5.59.04 11.44.167 16.89.411 17.6.551 35.27.592 52.92.035 14.46.592 28.43.868 42.61.292 15.04 1.382 28.55 1.94 42.96.085 2.22.185 4.55.389 6.48.514 4.88 1.471 4.73 1.929-.29.184-2 .371-4.42.335-6.54-.27-15.63.168-31.13.283-46.68.169-22.78-.419-45.36-.504-68.05-.114-29.75-.708-59.34-.504-89.28.129-18.9-.092-38.15-.019-57.19.057-15.13-.175-30.353.322-45.453.361-10.921-.337-21.816-.17-32.861.532-35.484.004-71.073.294-106.596.222-27.159-.062-54.318-.05-81.477.007-17.435.382-34.876.345-52.304-.031-15.257-.035-30.566.02-45.771.094-25.936-.333-51.976.336-77.847.098-3.773.101-7.638.102-11.464.016-32.031-.19-64.121.085-96.086.309-36.184.154-72.374.415-108.499.136-19.004.053-38.139.416-56.986.404-21.008.031-42.128.456-62.908.483-23.6.509-47.32.622-70.85.2-41.9.739-83.75.698-125.69-.005-6.32.272-12.82.271-19.34-.001-6.14-.066-11.83-.712-17.48-.809-7.09-1.993-22.11-1.993-14.86.001 13.62-2.073 20.21-2.445 33.78z"></path>
-      </g>
-      <g buffered-rendering="static">
-        <path d="M4.85 35.708c-.029 1.04-1.783 17.58-1.35 26.79.018.37-.122 11.97-.146 12.33-.048.7-.174 1.76-.13 2.06 1.458 9.7-.138 20.01.212 29.8.348 9.71.035 19.24-.08 28.79-.06 4.81.034 9 .402 13.18.029.34.141.71.128.86-.803 10.56.909 22.39-.561 32.63-.278 1.93-.178 4.38-.143 6.66.346.51.73 1.18.558 3.66-.146 2.1-.456 3.84-.648 5.88-.244 2.58-.718 6.03.087 7.52.683 1.25.299-4.71 1.013-5.18-.171 2.88-.238 6.11-.535 8.47-.406 3.21-.487 5.99-.22 9.57.123 1.65.18 4.45.01 5.58-1.166 7.74-.01 15.7-.135 23.5-.107 6.53.723 3.97 1.428 3.05-.191 1.41-.286 2.41-.428 3.09-.47 2.27-1.764 2.53-.661 8.48-.645 4.25-.795 9.56-1 14.69-.243 6.03-.045 6.8 1.369 6 .042-.22.087-.64.123-.62.104.07.203.31.305.49l.085.72-.116-.49c-.131-.13-.263-.16-.396-.1-.349 3.27-.766 6.17-1.221 9.09-1.064 6.85-.719 12.261.836 15.806-1.469 9.731-1.469 9.731.517 17.434-.687 4.97-1.73 9.437-1.557 16.304.102 4.087-.071 7.494-.133 11.182-.112 6.645-.139 13.223-.478 19.763-.13 2.518.404 3.623.771 4.689l.111-.589-.101.635c.61 6.199-1.021 10.777-.409 16.977-1.128 9.018-.299 14.884 1.371 20.2-1.341 3.734-1.92 9.221-1.453 15.964.392 5.702-.804 12.726.596 17.467.445 1.504.175 4.296-.166 5.807-1.164 5.16-.121 6.5.471 8.665.112 4.512-1.363 3.643-1.019 8.56.326 4.676 1.162 6.18 1.96 7.612.066.118.136.177.202.269.47.66 1.103 1.092.68 4.898-.274 2.452-.777 3.243-1.202.405-.221-1.471-.438-3.387-.819-2.047-.326 1.151-.349 3.708-.169 5.154.367 2.968.348 5.002-.1 7.755-.574 3.532-.494 8.535-.693 12.884-.11 2.393.338 2.838.68 3.237.181 1.092.363 1.085.546.006.231 1.55.197 2.642-.156 3.499-.976 2.367-1.891 4.166-1.196 12.366.298 3.512-.184 9.031-.331 13.622-.021.654-.236 1.459-.206 1.772.776 8.58-.089 17.121.001 25.655.019 1.805.247 2.544.571 2.355.135-.242.194-1.969.409-.628l-.37.902c-.233 1.923-.487 3.885-.332 6.331.318 5.022.205 9.456-.307 14.145-.367 3.374-.677 7.71.233 10.823.25.857.068 1.831-.045 2.831-.533 4.781.019 5.54.647 4.192.637-1.36 1.236 1.047 1.883-1.373-.068 1.615-.056 2.505-.129 2.832-.675 3.073-2.203.163-2.147 7.795.037 5.134-.871 9.652-.208 15.015.204 1.648-.149 3.544-.253 5.317-.536 9.227-.525 9.371 1.022 15.943-1.033 6.605-1.331 14.06-.846 22.379.113 1.929-.123 2.701-.345 3.59-.046-.177-.099-.523-.138-.484-.121.111-.116.582.006 1.19.436 3.904 1.227 7.063.348 12.622-.518 3.263-.144 8.56-.48 12.942-.231 3.021.233 6.48 1.053 6.284.459-1.739.93-2.688 1.541-.732-.567.359-1.04.654-1.513.948-.587 3.649-.846 8.403-1.28 12.517-.655 6.212-.489 13.465.426 19.455l.082.706-.106-.595c-.356 1.511-.659 4.002-.427 5.834.839 6.624.036 12.713-.076 19.01-.408 1.766-.351 3.545-.005 5.336.004 2.839.008 5.677.01 8.515-.144 1.288-.104 1.589.14.778.125.288.361.785.357.844-.489 8.102-.884 16.185-.063 24.386-.759 3.597-.452 6.232.245 8.626.076.255.146 1.131.125 1.595-.824 17.991-.888 26.885-.27 39.12.053 1.073.193 2.871.127 3.159-.703 2.969-.506 5.369-.249 9.659.176 2.956-.287 7.534.314 11.17.193 1.177.018 2.949-.14 4.244-.923 7.553-.827 15.237-.311 23.582.189 3.06.21 7.37-.148 10.862-.043-.196-.093-.582-.129-.549-.119.111-.11.549.023 1.118-.072 4.977.559 10.705-.528 14.642-.076.275-.078 2.021-.065 2.04 1.359 1.982.075 8.548.757 12.772.592 3.663-.454 10.457-.212 15.336.346 6.971-.346 14.557.523 20.985.063.471.044 1.589-.014 2.165-.799 7.73.133 16.95-.729 24.73-.196 1.76-.217 4.56-.142 6.7.427 12.29.084 24.78.408 37.18.177 6.75-.027 14.31-.173 21.21-.13 6.17.044 11.99.02 17.95-.049 12.03.104 24.06-.082 36.11-.085 5.59.04 11.44.167 16.89.411 17.6.551 35.27.592 52.92.035 14.46.592 28.43.868 42.61.292 15.04 1.382 28.55 1.94 42.96.085 2.22.185 4.55.389 6.48.514 4.88 1.471 4.73 1.929-.29.184-2 .371-4.42.335-6.54-.27-15.63.168-31.13.283-46.68.169-22.78-.419-45.36-.504-68.05-.114-29.75-.708-59.34-.504-89.28.129-18.9-.092-38.15-.019-57.19.057-15.13-.175-30.353.322-45.453.361-10.921-.337-21.816-.17-32.861.532-35.484.004-71.073.294-106.596.222-27.159-.062-54.318-.05-81.477.007-17.435.382-34.876.345-52.304-.031-15.257-.035-30.566.02-45.771.094-25.936-.333-51.976.336-77.847.098-3.773.101-7.638.102-11.464.016-32.031-.19-64.121.085-96.086.309-36.184.154-72.374.415-108.499.136-19.004.053-38.139.416-56.986.404-21.008.031-42.128.456-62.908.483-23.6.509-47.32.622-70.85.2-41.9.739-83.75.698-125.69-.005-6.32.272-12.82.271-19.34-.001-6.14-.066-11.83-.712-17.48-.809-7.09-1.993-22.11-1.993-14.86.001 13.62-2.073 20.21-2.445 33.78z"></path>
-      </g>
-    </svg>
-  );
-};
 
 const Arrow = () => {
   return (
